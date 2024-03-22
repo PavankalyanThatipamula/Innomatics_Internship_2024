@@ -1,0 +1,19 @@
+pip freeze > requirement.txt
+
+scp -r -i "Sentiment_analysis_flask_key.pem" webapp ubuntu@ec2-3-91-30-96.compute-1.amazonaws.com:~/
+
+ssh 
+
+sudo apt update
+sudo apt upgrade
+
+sudo apt install python3-pip
+
+cd webapp/
+
+pip install -r requirement.txt
+
+To run the cloud server 
+nohup python3 app.py
+top -u $USER
+kill Process_id

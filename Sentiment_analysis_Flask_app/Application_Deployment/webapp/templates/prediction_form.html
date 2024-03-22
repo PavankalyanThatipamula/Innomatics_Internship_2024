@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <style>
+        /* Centering the content */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            background-color: #f2f2f2; /* Light gray background */
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            padding: 15px;
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        h3 {
+            text-align: center;
+            background-color: #e6e6e6; /* Lighter gray background */
+            padding: 20px;
+            border-radius: 8px; /* Rounded corners */
+            font-size: 24px; /* Larger font size for h3 */
+        }
+
+        /* Emoji styles */
+        .emoji {
+            font-size: 28px; /* Adjust the size as needed */
+            margin-left: 10px; /* Add some space between the text and emoji */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Prediction</h1>
+    <h3>{{ predicted_sentiment_label }}
+        {% if predicted_sentiment_label == 'Positive' %}
+            <span class="emoji">&#128512;</span> <!-- Smile Emoji -->
+        {% elif predicted_sentiment_label == 'Negative' %}
+            <span class="emoji">&#128525;</span> <!-- Heart Eyes Face Emoji -->
+        {% endif %}
+    </h3>
+</body>
+</html>
